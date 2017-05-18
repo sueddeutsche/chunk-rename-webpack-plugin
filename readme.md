@@ -1,4 +1,6 @@
-# chunk-rename-webpack-plugin [![npm version](https://badge.fury.io/js/chunk-rename-webpack-plugin.svg)](https://badge.fury.io/js/chunk-rename-webpack-plugin) [![devDependencies Status](https://david-dm.org/sueddeutsche/chunk-rename-webpack-plugin/dev-status.svg)](https://david-dm.org/sueddeutsche/chunk-rename-webpack-plugin?type=dev) [![Build Status](https://travis-ci.org/sueddeutsche/chunk-rename-webpack-plugin.svg?branch=master)](https://travis-ci.org/sueddeutsche/chunk-rename-webpack-plugin) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# chunk-rename-webpack-plugin
+
+[![npm version](https://badge.fury.io/js/chunk-rename-webpack-plugin.svg)](https://badge.fury.io/js/chunk-rename-webpack-plugin) [![devDependencies Status](https://david-dm.org/sueddeutsche/chunk-rename-webpack-plugin/dev-status.svg)](https://david-dm.org/sueddeutsche/chunk-rename-webpack-plugin?type=dev) [![Build Status](https://travis-ci.org/sueddeutsche/chunk-rename-webpack-plugin.svg?branch=master)](https://travis-ci.org/sueddeutsche/chunk-rename-webpack-plugin) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This plugin allows you to rename specific chunks in your bundle independently from the configuration you set in `output.filename` and `output.chunkFilename`. Tested with webpack 1 and 2!
 
