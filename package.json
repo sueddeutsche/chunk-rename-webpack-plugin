@@ -1,0 +1,40 @@
+{
+  "name": "chunk-rename-webpack-plugin",
+  "version": "1.0.0",
+  "description": "Webpack plugin to name chunk files independently of output.filename & output.chunkFilename",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "preparetest": "cd test/deps/webpack1 && npm i && cd ../webpack2 && npm i",
+    "test": "mocha --recursive 'test/*.test.js' -R spec",
+    "tdd": "watch --filter=./watchFilter.js 'npm run test' lib/ test/",
+    "prepublish": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sueddeutsche/chunk-rename-webpack-plugin.git"
+  },
+  "keywords": [
+    "webpack",
+    "plugin",
+    "rename",
+    "chunk",
+    "hashing"
+  ],
+  "author": "Süddeutsche Zeitung Digitale Medien GmbH - Entwicklungsredaktion",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sueddeutsche/chunk-rename-webpack-plugin/issues"
+  },
+  "homepage": "https://github.com/sueddeutsche/chunk-rename-webpack-plugin#readme",
+  "peerDependencies": {
+    "webpack": ">= 1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.19.0",
+    "mocha": "^3.4.1",
+    "rimraf": "^2.6.1",
+    "watch": "^1.0.2"
+  }
+}
