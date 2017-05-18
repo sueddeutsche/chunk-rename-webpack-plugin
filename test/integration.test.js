@@ -4,7 +4,7 @@ const fs = require("fs");
 const path = require("path");
 const rimraf = require("rimraf");
 
-describe("chunk-rename-webpack-plugin", () => {
+describe("integration", () => {
     after((done) => {
         rimraf(path.join(__dirname, "tmp", "*.js"), done);
     });
