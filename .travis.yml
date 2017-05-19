@@ -1,9 +1,18 @@
 language: node_js
 node_js:
-  - "6"
-  - "7"
+  - '6'
+  - '7'
 install:
-  - "npm install"
-  - "npm run preparetest"
+  - npm install
+  - npm run preparetest
 after_success:
-  - "npm run coveralls"
+  - npm run coveralls
+deploy:
+  provider: npm
+  email: benjamin.urban@sueddeutsche.de
+  api_key:
+    secure: cdTdZF6dN3xt8spLnd6m+HpljKrTfP+AUSJyjGb0pfvct09H8ZfAwZEudm24grfGKLuc4YqyZ/KAnV+SN82PCqS15Eoe7D89rf4WRue6I5fwTbCTyFVp4totfxn1yIHVWzGF37j3RV8zDShw1b/+Gv+GmaUZ0+B18LDMgFKr0QCqA9UxK+KSXgzuNE5pL4wDhxGfmgkdmPvzmsGtcbUfn0KYIE54ecinqadpwl2Q2qqOaP6/1EuCVrZ46A16JXk6DJ/3qfWX8Tl/A9S8Mf7cs6D7jrKu/KEU2qdDq62IrzEW3v+2+4z+tKNE9PoGq6dxx9K0xIJodCWO8ni8RyG9FZmi/A2qmBqevExXleSutGhWVbsEYtvY13vCg+ceWUUkKsUm2s2+Uw+ZYbAjp7fcGB45QEmx9CwC14UQDKzcX12SFUNqw60JDHPIQnRqgFLDUvktS44hlhurMHzSGJDTw+wbn2eEBJd2Uq0kOjfY5sD/9uoKDHVegTcgAYQpnctljvme/BXTjHvC6ZdKdALeoIvvP7lo6TsQmkphVsPrDihZmDTr0qU75KO+OkV64hZSQ2fmKgmN7jmz1bvwXSp372ckeHCGX6aupC+gicrFgfOORoQvVygHWvg4uIzHp8Stk8uGjnTywvuADc0sRp+W6Df0MzQZTZZ9PJXT6c1412U=
+  on:
+    tags: true
+    branch: master
+    repo: sueddeutsche/chunk-rename-webpack-plugin
