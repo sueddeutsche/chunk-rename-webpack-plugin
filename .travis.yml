@@ -6,7 +6,8 @@ install:
   - npm install
   - npm run preparetest
 after_success:
-  - npm run coveralls
+  - npm install coveralls
+  - npm run coverage && cat coverage/lcov.info | coveralls
 deploy:
   provider: npm
   email: benjamin.urban@sueddeutsche.de

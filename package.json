@@ -9,7 +9,6 @@
     "test": "mocha --recursive 'test/*.test.js' -R spec",
     "tdd": "watch --filter=./watchFilter.js 'npm run test' lib/ test/",
     "coverage": "nyc -a --reporter=text --reporter=lcov npm run test",
-    "coveralls": "npm run coverage && cat coverage/lcov.info | coveralls",
     "prepublish": "npm run lint"
   },
   "repository": {
@@ -34,7 +33,6 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "coveralls": "^2.13.1",
     "eslint": "^3.19.0",
     "mocha": "^3.4.1",
     "nyc": "^10.3.2",
