@@ -1,6 +1,6 @@
 {
   "name": "chunk-rename-webpack-plugin",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Webpack plugin to name chunk files independently of output.filename & output.chunkFilename",
   "main": "lib/index.js",
   "scripts": {
