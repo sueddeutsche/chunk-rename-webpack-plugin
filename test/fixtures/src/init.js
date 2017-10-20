@@ -1,4 +1,4 @@
-console.log("Hello, welcome to my app. I am loader and I require all other chunks that my page is built of");
+console.log("Hello, welcome to my app. I am the entrypoint and I require all other chunks that my page is built of");
 
 // eslint-disable-next-line
 require.ensure(["./loginPage"], function () {

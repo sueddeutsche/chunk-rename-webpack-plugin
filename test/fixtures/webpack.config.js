@@ -3,7 +3,7 @@ const ChunkRenamePlugin = require("../../lib/");
 
 module.exports = {
     entry: {
-        loader: "./src/loader.js",
+        init: "./src/init.js",
         vendor: "./src/vendor.js"
     },
 
@@ -15,7 +15,7 @@ module.exports = {
 
     plugins: [
         new ChunkRenamePlugin({
-            loader: "loader.js",
+            init: "init.js",
             login: "chunk-[name]-page.js"
         })
     ]

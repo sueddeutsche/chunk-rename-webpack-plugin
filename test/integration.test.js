@@ -36,7 +36,7 @@ function runTest(webpackBinary, configPath) {
                 expect(stderr).to.have.length(0);
 
                 const outputFiles = fs.readdirSync(path.resolve(__dirname, "tmp"));
-                expect(outputFiles).to.include("loader.js");
+                expect(outputFiles).to.include("init.js");
                 expect(outputFiles).to.include("chunk-login-page.js");
 
                 expect(outputFiles.find((file) => file.startsWith("vendor-"))).to.not.be.a("undefined");

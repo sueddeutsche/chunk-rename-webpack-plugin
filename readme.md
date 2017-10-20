@@ -10,7 +10,7 @@ This plugin allows you to rename specific chunks in your bundle independently fr
 
 ## Use cases
 In general: Your output file names do not follow a consistent pattern.
-* You want to hash all but one of your files (e.g. you have a file `loader.js`, that needs a static name, but all other files should be hashed)
+* You want to hash all but one of your files (e.g. you have a file `init.js`, that needs a static name, but all other files should be hashed)
 * You want some files to use the module name (`[name]`) and some files to use the module id (`[id]`)
 * And others ... 
 
@@ -26,7 +26,7 @@ const ChunkRenamePlugin = require("chunk-rename-webpack-plugin");
 
 module.exports = {
     entry: {
-        loader: "./src/loader.js",
+        init: "./src/init.js",
         vendor: "./src/vendor.js"
     },
 
@@ -38,7 +38,7 @@ module.exports = {
 
     plugins: [
         new ChunkRenamePlugin({
-            loader: "loader.js",
+            init: "init.js",
             login: "chunk-[name]-page.js"
         })
     ]
@@ -51,11 +51,11 @@ Hash: 8f17bb6534edbcdd963e
 Version: webpack 1.15.0
 Time: 73ms
                           Asset       Size  Chunks             Chunk Names
-                      loader.js     4.2 kB       0  [emitted]  loader
-                  login-page.js  117 bytes       1  [emitted]  login
+                        init.js     4.2 kB       0  [emitted]  init
+            chunk-login-page.js  117 bytes       1  [emitted]  login
 summary-8079db00b7b1bd6a78e6.js  113 bytes       2  [emitted]  summary
  vendor-ae2570120d44d2ba301c.js    1.43 kB       3  [emitted]  vendor
-   [0] ./src/loader.js 440 bytes {0} [built]
+   [0] ./src/init.js 440 bytes {0} [built]
    [0] ./src/vendor.js 39 bytes {3} [built]
    [1] ./src/loginPage.js 30 bytes {1} [built]
    [2] ./src/summaryPage.js 32 bytes {2} [built]
