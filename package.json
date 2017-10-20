@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "lint": "eslint .",
-    "preparetest": "cd test/deps/webpack1 && npm i && cd ../webpack2 && npm i",
+    "preparetest": "cd test/deps/webpack1 && npm i && cd ../webpack2 && npm i && cd ../webpack3 && npm i",
     "test": "mocha --recursive 'test/*.test.js' -R spec",
     "tdd": "watch --filter=./watchFilter.js 'npm run test' lib/ test/",
     "coverage": "nyc -a --reporter=text --reporter=lcov npm run test",

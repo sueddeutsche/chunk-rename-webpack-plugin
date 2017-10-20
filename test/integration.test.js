@@ -9,14 +9,20 @@ describe("integration", () => {
         rimraf(path.join(__dirname, "tmp", "*.js"), done);
     });
 
-    it("should work in webpack 1.x.x", () => {
-        const webpack1Bin = path.join(__dirname, "deps", "webpack1", "node_modules", ".bin", "webpack");
-        return runTest(webpack1Bin, "webpack.config.js");
-    });
+    const webpackEnvs = fs.readdirSync(path.join(__dirname, "deps"));
 
-    it("should work in webpack 2.x.x", () => {
-        const webpack2Bin = path.join(__dirname, "deps", "webpack2", "node_modules", ".bin", "webpack");
-        return runTest(webpack2Bin, "webpack.config.js");
+    webpackEnvs.forEach((webpackEnv) => {
+        const version = child_process
+            .execSync("npm ls webpack", {
+                cwd: path.join(__dirname, "deps", webpackEnv),
+                encoding: "utf8"
+            })
+            .match(/webpack@([0-9.]+)/)[1];
+
+        it(`should work with webpack ${version}`, () => {
+            const webpack1Bin = path.join(__dirname, "deps", "webpack1", "node_modules", ".bin", "webpack");
+            return runTest(webpack1Bin, "webpack.config.js");
+        });
     });
 });
 
