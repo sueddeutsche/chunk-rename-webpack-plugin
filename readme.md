@@ -6,7 +6,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/sueddeutsche/chunk-rename-webpack-plugin/badge.svg?branch=master)](https://coveralls.io/github/sueddeutsche/chunk-rename-webpack-plugin?branch=master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This plugin allows you to rename specific chunks in your bundle independently from the configuration you set in `output.filename` and `output.chunkFilename`. Tested with webpack 1 and 2!
+This plugin allows you to rename specific chunks in your bundle independently from the configuration you set in `output.filename` and `output.chunkFilename`. Works with webpack 1+.
 
 ## Use cases
 In general: Your output file names do not follow a consistent pattern.
