@@ -24,7 +24,7 @@
     "chunk",
     "hashing"
   ],
-  "author": "Süddeutsche Zeitung Digitale Medien GmbH - Entwicklungsredaktion",
+  "author": "Süddeutsche Zeitung Digitale Medien GmbH",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/sueddeutsche/chunk-rename-webpack-plugin/issues"
@@ -35,9 +35,9 @@
   },
   "devDependencies": {
     "chai": "^4.1.1",
-    "eslint": "^4.4.1",
-    "mocha": "^4.0.1",
-    "nyc": "^11.1.0",
+    "eslint": "^5.16.0",
+    "mocha": "^6.1.4",
+    "nyc": "^14.1.1",
     "rimraf": "^2.6.1",
     "watch": "^1.0.2"
   },
