@@ -16,7 +16,7 @@ In general: Your output file names do not follow a consistent pattern.
 
 # Compatiblity
 This plugin is tested with the following module/runtime versions:
-* webpack 1.15.0, 2.5.1, 3.8.1
+* webpack 1.15.0, 2.7.0, 3.12.0 & 4.32.2
 * Node.js 4+ (older Node.js versions and io.js do not work - sorry)
 
 ## Usage
