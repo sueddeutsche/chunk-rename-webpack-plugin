@@ -309,7 +309,7 @@
     "func-names": 0,
     "func-style": [
       2,
-      "declaration"
+      "expression"
     ],
     "id-length": [
       1,
