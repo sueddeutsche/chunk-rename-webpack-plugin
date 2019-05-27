@@ -20,7 +20,7 @@ describe("integration", () => {
             .match(/webpack@([0-9.]+)/)[1];
 
         it(`should work with webpack ${version}`, () => {
-            const webpack1Bin = path.join(__dirname, "deps", "webpack1", "node_modules", ".bin", "webpack");
+            const webpack1Bin = path.join(__dirname, "deps", webpackEnv, "node_modules", ".bin", "webpack");
             return runTest(webpack1Bin, "webpack.config.js");
         });
     });
