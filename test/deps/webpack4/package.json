@@ -2,6 +2,7 @@
   "name": "webpack4-env",
   "version": "0.0.0",
   "dependencies": {
-    "webpack": "^4"
+    "webpack": "^4",
+    "webpack-cli": "^3"
   }
 }
