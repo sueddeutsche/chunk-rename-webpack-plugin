@@ -2,6 +2,7 @@ const path = require("path");
 const ChunkRenamePlugin = require("../../lib/");
 
 module.exports = {
+    context: __dirname,
     entry: {
         init: "./src/init.js",
         vendor: "./src/vendor.js"
